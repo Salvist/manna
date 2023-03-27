@@ -27,6 +27,9 @@ class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
       case 2:
         context.go('/notifications');
         break;
+      case 3:
+        context.go('/user_profile');
+        break;
     }
   });
 
@@ -39,6 +42,9 @@ class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _setIndex,
+        fixedColor: Colors.black,
+        unselectedItemColor: Colors.black,
+        type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -52,6 +58,10 @@ class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
             icon: Icon(Icons.notifications),
             label: 'Notifications'
           ),
+          BottomNavigationBarItem(
+            icon:Icon(Icons.account_circle),
+            label: 'Profile'
+          )
         ],
       ),
     );

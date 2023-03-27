@@ -5,6 +5,7 @@ import 'package:manna/screens/auth/signup_page.dart';
 import 'package:manna/screens/explore_page.dart';
 import 'package:manna/screens/home_page.dart';
 import 'package:manna/screens/notifications_page.dart';
+import 'package:manna/screens/user_profile_page.dart';
 import 'package:manna/widgets/scaffold_with_bottom_nav_bar.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -35,6 +36,10 @@ final router = GoRouter(
         GoRoute(
           path: '/notifications',
           builder: (context, state) => NotificationsPage(),
+        ),
+        GoRoute(
+          path: '/user_profile',
+          builder: (context, state) => UserProfilePage()
         )
       ]
     )
