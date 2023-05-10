@@ -16,22 +16,22 @@ class ScaffoldWithBottomNavBar extends StatefulWidget {
 class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
   int _selectedIndex = 0;
   void _setIndex(int index) => setState(() {
-    _selectedIndex = index;
-    switch(index){
-      case 0: 
-        context.go('/home');
-        break;
-      case 1:
-        context.go('/explore');
-        break;
-      case 2:
-        context.go('/notifications');
-        break;
-      case 3:
-        context.go('/user_profile');
-        break;
-    }
-  });
+        _selectedIndex = index;
+        switch (index) {
+          case 0:
+            context.go('/home');
+            break;
+          case 1:
+            context.go('/explore');
+            break;
+          case 2:
+            context.go('/notifications');
+            break;
+          case 3:
+            context.go('/user_profile');
+            break;
+        }
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -50,18 +50,9 @@ class _ScaffoldWithBottomNavBarState extends State<ScaffoldWithBottomNavBar> {
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Explore'
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Notifications'
-          ),
-          BottomNavigationBarItem(
-            icon:Icon(Icons.account_circle),
-            label: 'Profile'
-          )
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Explore'),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Notifications'),
+          BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: 'Profile')
         ],
       ),
     );
